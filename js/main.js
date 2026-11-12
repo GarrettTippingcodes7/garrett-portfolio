@@ -156,8 +156,8 @@
     });
   });
 
-  // Contact form: submit to Netlify Forms in place. Without JS it posts normally and lands on thanks.html.
-  const form = document.querySelector('form[data-netlify="true"]');
+  // Contact form: sends through Web3Forms in place. Without JS it posts normally and Web3Forms redirects to thanks.html.
+  const form = document.querySelector('form[data-web3forms]');
   if (form) {
     const status = form.querySelector('.form-status');
     form.addEventListener('submit', async (e) => {
@@ -169,12 +169,15 @@
       status.textContent = '';
       status.className = 'form-status';
       try {
-        const res = await fetch('/', {
+        const data = Object.fromEntries(new FormData(form));
+        delete data.redirect; // only used by the no-JS fallback
+        const res = await fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString(),
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data),
         });
-        if (!res.ok) throw new Error(res.status);
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || json.success === false) throw new Error(json.message || res.status);
         form.reset();
         status.textContent = 'Thanks! Your message is on its way. I’ll get back to you soon.';
         status.classList.add('is-success');

@@ -118,9 +118,13 @@
           </ul>
         </div>
 
-        <form class="contact-form reveal" name="contact" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="company-website">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="visually-hidden"><label>Leave this empty: <input name="company-website" tabindex="-1" autocomplete="off"></label></p>
+        <!-- Sent by Web3Forms (free), which emails each message to Garrett. The access key is public by design. -->
+        <form class="contact-form reveal" name="contact" method="POST" action="https://api.web3forms.com/submit" data-web3forms>
+          <input type="hidden" name="access_key" value="135dab4e-eb6d-4089-8975-4e315da1654b">
+          <input type="hidden" name="subject" value="New message from your portfolio">
+          <input type="hidden" name="from_name" value="Portfolio contact form">
+          <input type="hidden" name="redirect" value="https://garretttipping.netlify.app/thanks.html">
+          <p class="visually-hidden"><label>Leave this empty: <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
           <div class="field-row">
             <div class="field">
               <label for="name">Name</label>
