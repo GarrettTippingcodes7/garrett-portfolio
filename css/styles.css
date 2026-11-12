@@ -869,7 +869,9 @@ html, body, .site-header, .site-menu { transition: background-color .3s ease, bo
   .work-list { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   /* subgrid keeps each card's title, image, summary and button lined up across the row */
   .work-card { grid-row: span 4; grid-template-rows: subgrid; gap: 20px; padding: 24px; }
-  .work-card h3 { font-size: 32px; }
+  /* cap height matches the two-line No./year block; scales down so titles never wrap */
+  .work-card header { align-items: last baseline; } /* title sits on the same line as the year */
+  .work-card h3 { font-size: clamp(36px, 3.2vw, 46px); line-height: .81; }
   .work-card .media { aspect-ratio: 4 / 3; }
   .work-card .btn { align-self: end; justify-self: stretch; justify-content: center; }
 }
