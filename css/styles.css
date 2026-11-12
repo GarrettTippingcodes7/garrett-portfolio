@@ -827,3 +827,15 @@ html, body, .site-header, .site-menu { transition: background-color .3s ease, bo
 :root[data-theme="light"] .field input:user-invalid, :root[data-theme="light"] .field textarea:user-invalid { border-color: #b2382a; }
 :root[data-theme="light"] .mini-card.muted h3 { text-decoration-color: rgba(12, 21, 28, .35); }
 :root[data-theme="light"] .field input:focus, :root[data-theme="light"] .field textarea:focus, :root[data-theme="light"] .field select:focus { box-shadow: 0 0 0 3px rgba(0, 117, 99, .16); }
+
+/* Role dropdown: drop the cramped native control, keep the same padding as the other fields, custom arrow */
+.field select {
+  -webkit-appearance: none; appearance: none;
+  min-height: 54px; padding: 14px 52px 14px 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2321e1be' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 18px center; background-size: 14px;
+}
+.field select option { background: var(--bg-elev); color: var(--text); }
+:root[data-theme="light"] .field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23007563' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
