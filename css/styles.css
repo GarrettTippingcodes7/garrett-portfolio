@@ -871,5 +871,11 @@ html, body, .site-header, .site-menu { transition: background-color .3s ease, bo
   .work-card { grid-row: span 4; grid-template-rows: subgrid; gap: 20px; padding: 24px; }
   .work-card h3 { font-size: 32px; }
   .work-card .media { aspect-ratio: 4 / 3; }
-  .work-card .btn { align-self: end; }
+  .work-card .btn { align-self: end; justify-self: stretch; justify-content: center; }
 }
+
+/* Card framing: keep the logo and headline of the wide website screenshots in view */
+.work-card .media--studio-six img,
+.work-card .media--shepherd-ai img { object-position: left top; }
+/* Studio Six: trim the cream strip (the next page section) off the bottom of the screenshot */
+.work-card .media--studio-six img { height: 112%; }
