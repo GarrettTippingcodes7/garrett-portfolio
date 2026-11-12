@@ -129,7 +129,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); text-transform: upperc
   font-size: clamp(20px, 3vw, 32px); letter-spacing: 5px; margin-bottom: 20px; color: var(--text);
 }
 .hero h1 { font-size: clamp(52px, 11vw, 144px); font-weight: 700; letter-spacing: -0.015em; line-height: .92; }
-.hero p { max-width: 750px; margin: 32px auto 0; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.6; }
+.hero p { max-width: 750px; margin: 48px auto 0; /* clears the scribble under the headline */ font-size: clamp(16px, 1.5vw, 20px); line-height: 1.6; }
 
 /* ---------- Work cards ---------- */
 .work-list { display: grid; gap: 32px; }
@@ -852,3 +852,14 @@ html, body, .site-header, .site-menu { transition: background-color .3s ease, bo
   .ai-table td { line-height: 1.55; }
   .ai-table td::before { margin-bottom: 6px; }
 }
+
+/* ---------- Hero: hand-drawn teal underline under "feel simple" ---------- */
+.hero h1 .hl { position: relative; display: inline-block; white-space: nowrap; }
+.hero .scribble {
+  position: absolute; left: -2%; width: 104%; top: calc(.82em + 8px); height: .2em; /* ink starts 8px below the letters' baseline */
+  color: var(--accent); overflow: visible; pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  animation: scribble .9s cubic-bezier(.65, 0, .35, 1) .95s forwards;
+}
+@keyframes scribble { to { clip-path: inset(0 0 0 0); } }
+@media (prefers-reduced-motion: reduce) { .hero .scribble { animation: none; clip-path: none; } }
