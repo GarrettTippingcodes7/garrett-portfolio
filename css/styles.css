@@ -839,3 +839,16 @@ html, body, .site-header, .site-menu { transition: background-color .3s ease, bo
 :root[data-theme="light"] .field select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23007563' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
 }
+
+/* ---------- Phones: 16px body text, roomier "How I used AI" table ---------- */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .testimonial blockquote p, .ps-card p, .r-summary, .r-bullets li, .r-quote p,
+  .field input, .field textarea, .field select { font-size: 16px; }
+}
+@media (max-width: 720px) {
+  .ai-table tr { gap: 18px; padding: 28px 0; }
+  .ai-table tr:first-child { padding-top: 8px; }
+  .ai-table td { line-height: 1.55; }
+  .ai-table td::before { margin-bottom: 6px; }
+}
