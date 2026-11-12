@@ -879,3 +879,9 @@ html, body, .site-header, .site-menu { transition: background-color .3s ease, bo
 .work-card .media--shepherd-ai img { object-position: left top; }
 /* Studio Six: trim the cream strip (the next page section) off the bottom of the screenshot */
 .work-card .media--studio-six img { height: 112%; }
+
+/* Split with the image on the left and the text on the right (text stays first in the page for phones) */
+.cs-split--media-left > .cs-figure { margin-top: 0; }
+@media (min-width: 900px) {
+  .cs-split--media-left > .cs-figure { order: -1; }
+}
