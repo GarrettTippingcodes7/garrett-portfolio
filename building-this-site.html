@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building This Site · Experiment · Garrett Tipping</title>
+  <meta name="description" content="How Garrett Tipping directed a Claude agent to build portfolio components inside a design system he defined first.">
+  <meta name="theme-color" content="#0c151c">
+  <meta property="og:title" content="Building This Site · Experiment · Garrett Tipping">
+  <meta property="og:description" content="How Garrett Tipping directed a Claude agent to build portfolio components inside a design system he defined first.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/work-field-service.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;500;600;700&family=Epilogue:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>(function(d){d.classList.add('js');var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})(document.documentElement)</script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <!-- site-header current="other-work.html" -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="hdr-left">
+      <a class="logo" href="/index.html" aria-label="Garrett Tipping, home">
+      <svg viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+        <rect class="frame" x="0.66" y="0.53" width="34.68" height="34.95" fill="none" stroke="currentColor" stroke-width="3.52"/>
+        <path fill="currentColor" d="M23.25 13.9167C23.25 15.1482 23.0894 16.324 22.7684 17.4445C22.4588 18.5647 21.9544 19.5556 21.255 20.4166C20.567 21.2778 19.6727 21.9676 18.5721 22.4862C17.4828 22.9954 16.1643 23.25 14.6164 23.25C13.0456 23.25 11.7156 22.9907 10.6264 22.4722C9.53715 21.9444 8.64284 21.25 7.94343 20.3889C7.2555 19.5278 6.75673 18.5324 6.4472 17.4028C6.14907 16.2731 6 15.1018 6 13.8889C6 12.6759 6.14907 11.5046 6.4472 10.375C6.75673 9.24534 7.2555 8.24535 7.94343 7.37498C8.64284 6.5046 9.53715 5.81018 10.6264 5.29166C11.7156 4.76389 13.0456 4.5 14.6164 4.5C16.0037 4.5 17.1905 4.69906 18.1764 5.09722C19.1625 5.49534 19.8905 6.10183 20.3606 6.91665V4.80554H22.3728V10.75H20.3606C20.3606 10.0926 20.2059 9.48147 19.8963 8.91667C19.5982 8.34259 19.1912 7.85185 18.6751 7.44442C18.1593 7.03703 17.5458 6.71756 16.835 6.48609C16.1356 6.24537 15.396 6.125 14.6164 6.125C13.401 6.125 12.3921 6.35647 11.5895 6.81942C10.7984 7.28239 10.162 7.88888 9.68047 8.63889C9.19889 9.38889 8.85493 10.2222 8.64859 11.1389C8.45365 12.0555 8.3562 12.9721 8.3562 13.8889C8.3562 14.7962 8.45365 15.713 8.64859 16.6389C8.85493 17.5555 9.19889 18.3843 9.68047 19.125C10.162 19.8565 10.7984 20.4584 11.5895 20.9306C12.3921 21.3935 13.401 21.625 14.6164 21.625C16.428 21.625 17.8553 21.0602 18.8988 19.9306C19.9422 18.8009 20.5613 17.213 20.7562 15.1667H15.7859V13.5417H23.25V13.9167Z"/>
+        <path fill="currentColor" d="M30 19.5827H28.0228V15.1138H23.291V29.8862H26.8399V31.5H17.3933V29.8862H20.959V15.1138H16.2272V19.5827H14.25V13.5H30V19.5827Z"/>
+      </svg>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span><span class="menu-label">Menu</span>
+      </button>
+      </div>
+      <div class="hdr-right">
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="/about.html">Résumé</a></li>
+          <li><a href="/other-work.html" aria-current="page">Other Work</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-btn" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      </div>
+    </div>
+    <div class="site-menu" id="site-menu" hidden>
+      <div class="container">
+        <div class="menu-grid">
+          <div class="menu-col">
+            <h2 class="menu-h">Case studies</h2>
+            <ul>
+              <li><a href="/field-service.html"><strong>Field Service App</strong><span>Work-order redesign for gas techs</span></a></li>
+              <li><a href="/studio-six.html"><strong>Studio Six Closets</strong><span>Homepage redesign · consultations</span></a></li>
+              <li><a href="/shepherd-ai.html"><strong>Shepherd AI</strong><span>AI vehicle pricing for dealers</span></a></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h2 class="menu-h">Experience</h2>
+            <ul>
+              <li><a href="/about.html#job-studio-six"><strong>Studio Six Closets</strong><span>UX/UI Designer &amp; Researcher · 2026 – now</span></a></li>
+              <li><a href="/about.html#job-teco"><strong>TECO Peoples Gas</strong><span>Utility Technician II · 2022 – 2026</span></a></li>
+              <li><a href="/about.html#job-shepherd-ai"><strong>Shepherd AI</strong><span>User Experience Designer · 2024</span></a></li>
+              <li><a href="/about.html#job-player-epic"><strong>Player Epic</strong><span>UI Designer · 2024</span></a></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h2 class="menu-h">Other work</h2>
+            <ul>
+              <li><a href="/other-work.html"><strong>Art</strong><span>Personal artwork and illustration</span></a></li>
+              <li><a href="/other-work.html#experiments"><strong>Experiments</strong><span>Side projects and explorations</span></a></li>
+              <li><a href="/building-this-site.html"><strong>Building this site</strong><span>Figma Sites → hand-written code</span></a></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h2 class="menu-h">About</h2>
+            <ul>
+              <li><a href="/about.html" class="menu-dot"><strong>Résumé</strong><span>4.5 yrs field ops → UX/UI design</span></a></li>
+              <li><a href="/about.html#recommendations"><strong>Recommendations</strong><span>From mentor Dennis Chatham</span></a></li>
+              <li><a href="/contact.html"><strong>Contact</strong><span>Form, email or phone</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-foot">
+          <a href="mailto:garretttipping7@gmail.com">garretttipping7@gmail.com</a>
+          <a href="tel:+14074909996">407-490-9996</a>
+          <a href="https://www.linkedin.com/in/garrett-tipping-ba7260289/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="/assets/Garrett-Tipping-Resume.pdf" download>Résumé PDF ↓</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /site-header -->
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container">
+        <a class="cs-back" href="/other-work.html#experiments">← Other work</a>
+        <p class="eyebrow">Experiment · No. 1</p>
+        <h1>Building this site</h1>
+        <p class="cs-lede">Directing AI to build my portfolio’s components inside a design system I defined first.</p>
+        <p>This site is the experiment. I designed the brand system first, then connected a Claude agent to my Figma files and directed it to build components matching that style using the content I provided. I placed them in Figma Sites like building blocks and fixed bugs and made changes from there. Then I rebuilt the whole site in code with Claude Code.</p>
+        <dl class="cs-meta">
+        <div><dt>Role</dt><dd>Solo Designer</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Figma Sites, Claude, Claude Code, Netlify</dd></div>
+        <div><dt>Timeline</dt><dd>Jun – Nov 2026</dd></div>
+        </dl>
+        <div class="cs-hero-media"><picture><source srcset="/assets/img/exp-building-this-site.avif" type="image/avif"><img src="/assets/img/exp-building-this-site.jpg" alt="Garrett's portfolio components laid out in Figma" width="1800" height="910" decoding="async"></picture></div>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">The experiment</h2>
+      <div class="prose reveal">
+        <p>I built the first version of this site by hand in Figma Sites, with a Claude agent working with me. This was my first time working with an agent and I wanted to see where this would fit into my process and how good Claude did at matching my existing design style, and where my own judgment had to step in.</p>
+        <p>Currently Claude is not able to access Figma Sites files, so I built all of my components in regular design file and uploaded them to my asset library as a work around.</p>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">The rules came first</h2>
+      <div class="card-row">
+        <div class="mini-card reveal"><span class="label">Rule</span><h3>One brand system</h3><p>Navy, cream, and teal. Big Shoulders Display for titles, Epilogue for body. One card style and one hover state. Every component had to match.</p></div>
+        <div class="mini-card reveal"><span class="label">Rule</span><h3>Four breakpoints</h3><p>Desktop XL, Desktop, Tablet, and Mobile on every page. A component wasn’t done until it held up at all four.</p></div>
+        <div class="mini-card reveal"><span class="label">Rule</span><h3>The page sets the spacing</h3><p>No outer padding on components unless they’re cards. The page frame controls spacing, so every block drops in clean.</p></div>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">How the work split</h2>
+      <div class="prose reveal">
+        <p>Phase one was hand-building. I laid out every page myself and brought Claude in to debug: choppy accordions, an orphaned card stretching full width, and a sticky nav that turned transparent.</p>
+        <p>Phase two started when Claude could edit my files. It built the Evidence Ledger, About page concepts, a wireframe kit, and case study sections. I reviewed, rejected, and combined. Then I assembled everything in Sites and fixed what broke there.</p>
+      </div>
+      <figure class="cs-figure reveal">
+        <div class="phases">
+          <div class="stage"><span class="range">Jun – Aug</span><h3>Hand-building</h3><p>I built every page. Claude helped me debug.</p></div>
+          <div class="stage focus"><span class="range">Oct 2 – 6</span><p class="aim">Turning point</p><h3>First AI edits</h3><p>Claude builds in my files. I choose and correct.</p></div>
+          <div class="stage"><span class="range">Oct 11 – 14</span><h3>Building blocks</h3><p>A wireframe kit and prototype from my system.</p></div>
+          <div class="stage"><span class="range">Oct 19 – 28</span><h3>Assembly</h3><p>Pages assembled in Sites, quirks fixed.</p></div>
+          <div class="stage focus"><span class="range">Nov 2026</span><p class="aim">Part two</p><h3>Rebuilt in code</h3><p>Claude Code writes it. I direct and review.</p></div>
+        </div>
+        <figcaption>Five phases, June to November 2026: hand-building, first AI edits, building blocks, assembly, and the rebuild in code.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Where my judgment came in</h2>
+      <div class="prose reveal">
+        <p>Directing AI well came down to catching what it got wrong. These three moments shaped how I work with it.</p>
+      </div>
+      <div class="ps">
+        <div class="ps-card reveal"><span class="label">Problem:</span><h3>It said it was fixed. It wasn’t.</h3><p>The About page header images kept breaking on tablet and mobile. Claude reported a fix several times, and each one failed. It had only tested at the exact breakpoint widths.</p></div>
+        <div class="ps-card solution reveal"><span class="label">Solution:</span><h3>Make it prove the fix</h3><p>I rejected each attempt until we found the real causes: a disconnected component copy, a locked aspect ratio that collapsed in Sites, and instance overrides. A fix isn’t done until it holds at in-between widths too.</p></div>
+      </div>
+      <figure class="cs-figure reveal zoomable">
+        <div class="shot"><picture><source srcset="/assets/img/exp/about-header-fix.avif" type="image/avif"><img src="/assets/img/exp/about-header-fix.png" alt="The About page header images on mobile, before and after the fix" width="1800" height="1012" loading="lazy" decoding="async"></picture></div>
+        <figcaption>The About page header images on mobile, before and after the real fix.</figcaption>
+      </figure>
+      <div class="ps">
+        <div class="ps-card reveal"><span class="label">Problem:</span><h3>Changes I didn’t ask for</h3><p>While linking 28 components to my library colors, Claude silently reset their opacity to 100%. Subtle teal accents turned solid, and white text ended up on full teal.</p></div>
+        <div class="ps-card solution reveal"><span class="label">Solution:</span><h3>Review every change</h3><p>I caught it on review, and we fixed 34 affected chips. A confident summary isn’t proof, so every batch of AI edits gets a visual check before I accept it.</p></div>
+      </div>
+      <figure class="cs-figure reveal zoomable">
+        <div class="cs-pair">
+          <div class="shot"><picture><source srcset="/assets/img/exp/journey-before.avif" type="image/avif"><img src="/assets/img/exp/journey-before.png" alt="Shepherd AI journey map before linking colors" width="1800" height="1350" loading="lazy" decoding="async"></picture></div>
+          <div class="shot"><picture><source srcset="/assets/img/exp/journey-after.avif" type="image/avif"><img src="/assets/img/exp/journey-after.png" alt="Shepherd AI journey map after linking colors" width="1800" height="1350" loading="lazy" decoding="async"></picture></div>
+        </div>
+        <figcaption>The Shepherd AI journey map before and after linking its 156 colors to my GT Library.</figcaption>
+      </figure>
+      <div class="ps">
+        <div class="ps-card reveal"><span class="label">Problem:</span><h3>One answer is a guess</h3><p>Asking for a single About page design would have given me Claude’s taste, not mine.</p></div>
+        <div class="ps-card solution reveal"><span class="label">Solution:</span><h3>Ask for options, then choose</h3><p>I had it draft three directions: a standard layout, a bento grid, and a field work order. I kept Option A’s structure because it’s easy for a recruiter to scan, then pulled the profile fields from C so my field background sits right in the header. Nothing from B made the cut. Same with the Evidence Ledger, where I picked Option 3, and the hover timing, where I reverted its change back to 250ms.</p></div>
+      </div>
+      <figure class="cs-figure reveal zoomable">
+        <div class="shot"><picture><source srcset="/assets/img/exp/about-directions.avif" type="image/avif"><img src="/assets/img/exp/about-directions.png" alt="Three About page directions side by side" width="1800" height="1012" loading="lazy" decoding="async"></picture></div>
+        <figcaption>Three About page directions. The final page keeps A’s structure and C’s profile fields.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Where I still had to do it myself</h2>
+      <div class="prose reveal">
+        <p>Some problems AI couldn’t see. A hover flicker looked like a font bug, and Claude chased several wrong theories. I solved it by remembering I’d removed some auto layout nesting and missed a few hover variants.</p>
+        <p>Figma Sites had quirks no component could fix: instances keeping fixed widths, fixed navs that must be top-level layers, and “deleted” layers that were only hidden on smaller breakpoints. Setting every instance to Fill on every breakpoint became a routine step.</p>
+      </div>
+      <figure class="cs-figure reveal zoomable">
+        <div class="cs-pair">
+          <div class="shot"><picture><source srcset="/assets/img/exp/figma-fix-1.avif" type="image/avif"><img src="/assets/img/exp/figma-fix-1.png" alt="First Figma fix" width="1800" height="1350" loading="lazy" decoding="async"></picture></div>
+          <div class="shot"><picture><source srcset="/assets/img/exp/figma-fix-2.avif" type="image/avif"><img src="/assets/img/exp/figma-fix-2.png" alt="Second Figma fix" width="1800" height="1350" loading="lazy" decoding="async"></picture></div>
+        </div>
+        <figcaption>Two fixes that came from understanding Figma, not from prompting.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Part two: rebuilding it in code</h2>
+      <div class="prose reveal">
+        <p>Figma Sites got me live, but it limited what I could fix. So I handed my published site to Claude Code and had it rebuild every page as plain HTML, CSS and JavaScript, hosted on Netlify. Same direction-and-review loop, with a new medium.</p>
+        <p>I set the brief: one consistent header and footer, my LinkedIn recommendation, real contact details, a working contact form, and the brand details like the teal cursor and highlight. The judgment calls were still mine. I caught a case study section rebuilt in the wrong order, images sitting in boxes that didn’t match the page, and text that wasn’t filling its space, and I decided which images should stay still.</p>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">The result</h2>
+      <div class="prose reveal">
+        <p>Seven pages, three case studies, and an art and experiments page. Version one was built at four breakpoints and published straight from Figma. Version two is plain code I own and can change freely: images about 60% lighter, one shared header and footer, and a 404 page that works like a terminal.</p>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">What I’d do differently</h2>
+      <div class="prose reveal">
+        <p><strong>Link the library from day one.</strong> I built components before connecting my color and type styles, then had to retrofit them. Starting with the library would have kept everything consistent from the start.</p>
+        <p><strong>Capture as I go.</strong> I didn’t save before-and-after shots, so this case study was rebuilt from chat history and Figma version history. Now I screenshot before accepting a change and save named versions at milestones.</p>
+      </div>
+      <div class="callout reveal"><p>AI is fast at building blocks. Deciding what the blocks should be, and noticing when they’re wrong, is still the job.</p></div>
+    </section>
+
+    <section class="cs-section container" aria-label="More experiments">
+      <a class="next-cs reveal" href="/other-work.html#experiments">
+        <div>
+          <span class="kicker">Sandbox</span>
+          <h2>More experiments</h2>
+          <p>Side projects and things I’m figuring out in public, including my first Claude Code build.</p>
+          <span class="go">Back to Other Work <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg></span>
+        </div>
+        <div class="thumb"><picture><source srcset="/assets/img/exp-claude-code-build.avif" type="image/avif"><img src="/assets/img/exp-claude-code-build.jpg" alt="" loading="lazy"></picture></div>
+      </a>
+    </section>
+  </main>
+
+  <!-- site-footer cta -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- cta -->
+      <div class="footer-cta reveal">
+        <p class="eyebrow">Let’s talk</p>
+        <h2>Have a messy problem? Let’s untangle it.</h2>
+        <p>I’m open to UX/UI roles and freelance projects. Send a note, grab my résumé, or connect on LinkedIn.</p>
+        <div class="footer-actions">
+          <a class="btn btn-primary" href="/contact.html">Get in touch <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg></a>
+          <a class="btn btn-ghost" href="/assets/Garrett-Tipping-Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download résumé</a>
+        </div>
+      </div>
+      <!-- /cta -->
+      <div class="footer-grid">
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:garretttipping7@gmail.com">garretttipping7@gmail.com</a></li>
+            <li><a href="tel:+14074909996">407-490-9996</a></li>
+            <li>Orlando, FL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/garrett-tipping-ba7260289/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="/assets/Garrett-Tipping-Resume.pdf" download>Résumé (PDF)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="/index.html">Work</a></li>
+            <li><a href="/about.html">Résumé</a></li>
+            <li><a href="/other-work.html">Other Work</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Garrett Tipping. Designed and built in Orlando.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <!-- /site-footer -->
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Service App · Case Study · Garrett Tipping</title>
+  <meta name="description" content="Redesigning a gas utility's work-order app into a dashboard built for the truck, not the office.">
+  <meta name="theme-color" content="#0c151c">
+  <meta property="og:title" content="Field Service App · Case Study · Garrett Tipping">
+  <meta property="og:description" content="Redesigning a gas utility's work-order app into a dashboard built for the truck, not the office.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/work-field-service.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;500;600;700&family=Epilogue:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>(function(d){d.classList.add('js');var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})(document.documentElement)</script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <!-- site-header current="field-service.html" -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="hdr-left">
+      <a class="logo" href="/index.html" aria-label="Garrett Tipping, home">
+      <svg viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+        <rect class="frame" x="0.66" y="0.53" width="34.68" height="34.95" fill="none" stroke="currentColor" stroke-width="3.52"/>
+        <path fill="currentColor" d="M23.25 13.9167C23.25 15.1482 23.0894 16.324 22.7684 17.4445C22.4588 18.5647 21.9544 19.5556 21.255 20.4166C20.567 21.2778 19.6727 21.9676 18.5721 22.4862C17.4828 22.9954 16.1643 23.25 14.6164 23.25C13.0456 23.25 11.7156 22.9907 10.6264 22.4722C9.53715 21.9444 8.64284 21.25 7.94343 20.3889C7.2555 19.5278 6.75673 18.5324 6.4472 17.4028C6.14907 16.2731 6 15.1018 6 13.8889C6 12.6759 6.14907 11.5046 6.4472 10.375C6.75673 9.24534 7.2555 8.24535 7.94343 7.37498C8.64284 6.5046 9.53715 5.81018 10.6264 5.29166C11.7156 4.76389 13.0456 4.5 14.6164 4.5C16.0037 4.5 17.1905 4.69906 18.1764 5.09722C19.1625 5.49534 19.8905 6.10183 20.3606 6.91665V4.80554H22.3728V10.75H20.3606C20.3606 10.0926 20.2059 9.48147 19.8963 8.91667C19.5982 8.34259 19.1912 7.85185 18.6751 7.44442C18.1593 7.03703 17.5458 6.71756 16.835 6.48609C16.1356 6.24537 15.396 6.125 14.6164 6.125C13.401 6.125 12.3921 6.35647 11.5895 6.81942C10.7984 7.28239 10.162 7.88888 9.68047 8.63889C9.19889 9.38889 8.85493 10.2222 8.64859 11.1389C8.45365 12.0555 8.3562 12.9721 8.3562 13.8889C8.3562 14.7962 8.45365 15.713 8.64859 16.6389C8.85493 17.5555 9.19889 18.3843 9.68047 19.125C10.162 19.8565 10.7984 20.4584 11.5895 20.9306C12.3921 21.3935 13.401 21.625 14.6164 21.625C16.428 21.625 17.8553 21.0602 18.8988 19.9306C19.9422 18.8009 20.5613 17.213 20.7562 15.1667H15.7859V13.5417H23.25V13.9167Z"/>
+        <path fill="currentColor" d="M30 19.5827H28.0228V15.1138H23.291V29.8862H26.8399V31.5H17.3933V29.8862H20.959V15.1138H16.2272V19.5827H14.25V13.5H30V19.5827Z"/>
+      </svg>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span><span class="menu-label">Menu</span>
+      </button>
+      </div>
+      <div class="hdr-right">
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="/about.html">Résumé</a></li>
+          <li><a href="/other-work.html">Other Work</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-btn" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      </div>
+    </div>
+    <div class="site-menu" id="site-menu" hidden>
+      <div class="container">
+        <div class="menu-grid">
+          <div class="menu-col">
+            <h2 class="menu-h">Case studies</h2>
+            <ul>
+              <li><a href="/field-service.html" aria-current="page"><strong>Field Service App</strong><span>Work-order redesign for gas techs</span></a></li>
+              <li><a href="/studio-six.html"><strong>Studio Six Closets</strong><span>Homepage redesign · consultations</span></a></li>
+              <li><a href="/shepherd-ai.html"><strong>Shepherd AI</strong><span>AI vehicle pricing for dealers</span></a></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h2 class="menu-h">Experience</h2>
+            <ul>
+              <li><a href="/about.html#job-studio-six"><strong>Studio Six Closets</strong><span>UX/UI Designer &amp; Researcher · 2026 – now</span></a></li>
+              <li><a href="/about.html#job-teco"><strong>TECO Peoples Gas</strong><span>Utility Technician II · 2022 – 2026</span></a></li>
+              <li><a href="/about.html#job-shepherd-ai"><strong>Shepherd AI</strong><span>User Experience Designer · 2024</span></a></li>
+              <li><a href="/about.html#job-player-epic"><strong>Player Epic</strong><span>UI Designer · 2024</span></a></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h2 class="menu-h">Other work</h2>
+            <ul>
+              <li><a href="/other-work.html"><strong>Art</strong><span>Personal artwork and illustration</span></a></li>
+              <li><a href="/other-work.html#experiments"><strong>Experiments</strong><span>Side projects and explorations</span></a></li>
+              <li><a href="/building-this-site.html"><strong>Building this site</strong><span>Figma Sites → hand-written code</span></a></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h2 class="menu-h">About</h2>
+            <ul>
+              <li><a href="/about.html" class="menu-dot"><strong>Résumé</strong><span>4.5 yrs field ops → UX/UI design</span></a></li>
+              <li><a href="/about.html#recommendations"><strong>Recommendations</strong><span>From mentor Dennis Chatham</span></a></li>
+              <li><a href="/contact.html"><strong>Contact</strong><span>Form, email or phone</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-foot">
+          <a href="mailto:garretttipping7@gmail.com">garretttipping7@gmail.com</a>
+          <a href="tel:+14074909996">407-490-9996</a>
+          <a href="https://www.linkedin.com/in/garrett-tipping-ba7260289/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="/assets/Garrett-Tipping-Resume.pdf" download>Résumé PDF ↓</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /site-header -->
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container">
+        <a class="cs-back" href="/index.html#work">← All work</a>
+        <p class="eyebrow">Case study · No. 1</p>
+        <h1>Field service app</h1>
+        <p class="cs-lede">Redesigning the work-order software I used every day in the field into a dashboard built for the truck, not the office.</p>
+        <dl class="cs-meta">
+        <div><dt>Role</dt><dd>UX/UI Designer, UX Researcher</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Figma Make, Claude</dd></div>
+        <div><dt>Timeline</dt><dd>2026 · 6 weeks</dd></div>
+        </dl>
+        <div class="cs-hero-media"><picture><source srcset="/assets/img/work-field-service.avif" data-light="/assets/img/work-field-service.light.avif" type="image/avif"><img src="/assets/img/work-field-service.png" alt="The redesigned field service app on a tablet and phone" width="1363" height="1400" decoding="async"></picture></div>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Context</h2>
+      <div class="prose reveal">
+        <p>Like many trades, the natural gas distribution industry is dangerous, high stakes, and fast paced. With so much invested in tools designed to keep technicians safe in the field, the tools they use to document their work are often overlooked.</p>
+        <p>I spent 4.5 years in the field using an SAP Asset Manager app every day. I worked as a service technician in a busy territory. Each day I logged into my app, synced to populate my work, then I would manually go over each order adding them to my GPS to try and decide the best route while considering appointment windows, proximity, and due dates. Service turn on orders were the priority, unless an emergency was dispatched to me in which case I would drop everything else to respond within one hour. Although the program did what it was supposed to, it left a lot to be desired for techs in the field.</p>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">A generic system fails to deliver</h2>
+      <div class="prose reveal">
+        <p>The app stores all of the data that a tech needs to do their job, but it breaks down on its delivery. Techs can receive up to 20 types of work orders daily varying in importance, displayed in a single unfiltered list.</p>
+        <p>With hundreds of techs using the software at the same time downtime is common, but no offline mode meant every outage turned into a double entry: paper in the field, re-entered later to clear orders.</p>
+        <p>For departments like billing, mapping, and compliance it did exactly what it needed to do, but for the techs in the field it fell short. This redesign focuses on structural improvements within the constraints of the current software rather than a full software overhaul.</p>
+      </div>
+      <figure class="cs-figure reveal zoomable narrow">
+        <div class="shot"><picture><source srcset="/assets/img/cs/fs-context.avif" type="image/avif"><img src="/assets/img/cs/fs-context.png" alt="The original operations list in SAP Asset Manager, showing a long unfiltered list of work orders" width="1000" height="1334" loading="lazy" decoding="async"></picture></div>
+        <figcaption>The original operations list: every work order type in one unfiltered list.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-split">
+        <div class="sticky reveal">
+          <h2 class="cs-h2">Doing the field work</h2>
+          <div class="prose">
+            <p>From a simple meter read to a leak investigation, it’s the same tedious form. Fields highlighted in blue should be moved to the job details page. Fields highlighted in red do not need to be included on this form, and the orange fields are conditional.</p>
+            <p>I can tell you from personal experience how hard it can be to search a busy screen for the information you need after being in the sun for a few hours. Reducing the amount of information on each screen to what is most necessary for each step of the process helps ensure accuracy and efficiency.</p>
+          </div>
+          <ul class="legend" aria-label="Highlight key">
+            <li><i style="border-color:#4fc3e8"></i>Move to job details</li>
+            <li><i style="border-color:#ff6b5b"></i>Remove from form</li>
+            <li><i style="border-color:#ffa23a"></i>Conditional</li>
+          </ul>
+        </div>
+        <figure class="cs-figure reveal" style="margin-top:0">
+          <div class="scroll-frame" tabindex="0" aria-label="Work order form, scrollable">
+            <picture><source srcset="/assets/img/cs/fs-form-1.avif" type="image/avif"><img src="/assets/img/cs/fs-form-1.png" alt="Work order form, part 1, with fields highlighted" width="1000" height="1803" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="/assets/img/cs/fs-form-2.avif" type="image/avif"><img src="/assets/img/cs/fs-form-2.png" alt="Work order form, part 2, with fields highlighted" width="1000" height="1644" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="/assets/img/cs/fs-form-3.avif" type="image/avif"><img src="/assets/img/cs/fs-form-3.png" alt="Work order form, part 3, with fields highlighted" width="1800" height="1573" loading="lazy" decoding="async"></picture>
+          </div>
+          <figcaption>Re-created mock-up of the work order form. Scroll inside the frame to see it all.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Understanding the work flow</h2>
+      <div class="prose reveal">
+        <p>The benefit of having been the end user of this software is knowing what the issues are for myself and my co-workers and understanding the various work flows throughout the company.</p>
+      </div>
+      <figure class="cs-figure reveal" style="margin-top:32px">
+        <div class="flow-sub"><h3>Field work flow</h3><p>iPad + iPhone · One tech · One day’s work</p></div>
+        <div class="flow">
+        <div class="flow-col reveal">
+          <header><span class="num">01</span><div><h3>Today</h3><p>Day view · home screen</p></div></header>
+          <ol>
+            <li><strong>Workload summary</strong><span class="desc">Jobs left, emergencies in queue, avg. drive</span></li><li><strong>Now</strong><span class="desc">Current or emergency job · Start driving, More details</span></li><li><strong>Up next</strong><span class="desc">Remaining stops with drive time · P2 emergencies placed by sort</span></li><li><strong>Sort</strong><span class="desc">Best route · Appointment window · Priority · Oldest first</span></li><li><strong>Sync status<span class="tag auto">AUTO-FILLED</span></strong><span class="desc">Last synced time</span></li><li><strong>Account menu</strong><span class="desc">Truck inventory with low-stock count · job procedures · settings</span></li>
+          </ol>
+        </div>
+        <div class="flow-col reveal">
+          <header><span class="num">02</span><div><h3>Job detail</h3><p>Everything in one place</p></div></header>
+          <ol>
+            <li><strong>Status</strong><span class="desc">En route → Arrived → Working → Cleared · Hold · shown once driving</span></li><li><strong>Safety brief<span class="tag auto">AUTO-FILLED</span></strong><span class="desc">Opens on Arrived · hazards, roles, PPE, detector, premise alert</span></li><li><strong>Premise alert<span class="tag cond">CONDITIONAL</span></strong><span class="desc">Hazards surfaced first</span></li><li><strong>What you need on site<span class="tag auto">AUTO-FILLED</span></strong><span class="desc">Meter location &amp; #, appointment, customer, gate code · parts &amp; tools checked against truck inventory</span></li><li><strong>Dispatch notes</strong><span class="desc">What the customer reported</span></li><li><strong>Job procedure</strong><span class="desc">Procedure PDF for the job type · works offline</span></li><li><strong>Record details</strong><span class="desc">WO #, FLOC, premise, WO history, account history</span></li>
+          </ol>
+        </div>
+        <div class="flow-col reveal">
+          <header><span class="num">03</span><div><h3>Guided completion</h3><p>Starts at Job complete. Replaces the Mirata form and manual time entry</p></div></header>
+          <ol>
+            <li><strong>1 · Leak findings<span class="tag cond">CONDITIONAL</span></strong><span class="desc">Location, facility, grade, detection, safe time</span></li><li><strong>2 · Meter &amp; readings</strong><span class="desc">Confirm meter, present read, PPM, pressure, bypass</span></li><li><strong>3 · Parts used<span class="tag auto">AUTO-FILLED</span></strong><span class="desc">Pre-filled from the job · deducts from truck inventory</span></li><li><strong>4 · Review &amp; clear<span class="tag auto">AUTO-FILLED</span></strong><span class="desc">Summary, outcome, notes for next tech, time entry</span></li><li><strong>5 · Job cleared</strong><span class="desc">Success confirmation · low-stock alert · next job or back to Today</span></li>
+          </ol>
+        </div>
+        </div>
+        <figcaption>Information architecture for the app’s content and workflow.</figcaption>
+      </figure>
+      <figure class="cs-figure reveal zoomable">
+        <div class="cs-pair">
+          <div class="shot"><picture><source srcset="/assets/img/cs/fs-van-1.avif" type="image/avif"><img src="/assets/img/cs/fs-van-1.jpg" alt="Inside Garrett's work van, showing custom shelving" width="1000" height="1333" loading="lazy" decoding="async"></picture></div>
+          <div class="shot"><picture><source srcset="/assets/img/cs/fs-van-2.avif" type="image/avif"><img src="/assets/img/cs/fs-van-2.jpg" alt="Inside Garrett's work van, showing organized parts storage" width="1000" height="1333" loading="lazy" decoding="async"></picture></div>
+        </div>
+        <figcaption>My work van: custom storage and organization to maximize efficiency and inventory visibility.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Turning user research and experience into solutions</h2>
+      <div class="prose reveal">
+        <p>Narrowing my scope and focusing on the issues that mattered the most was more like scratching an itch than making a decision. I created design solutions for two major challenges techs face daily, starting with:</p>
+      </div>
+      <div class="ps">
+        <div class="ps-card reveal"><span class="label">Problem:</span><h3>Lack of decision support tools</h3><p>Filters that don’t work for techs, lack of visual hierarchy across work-orders, and no GPS routing integrations leave the decision making up to the techs.</p></div>
+        <div class="ps-card solution reveal"><span class="label">Solution:</span><h3>Built-in decision support</h3><p>Filters for key information, visual hierarchy of work, GPS integration and optimized route suggestion.</p></div>
+      </div>
+      <figure class="cs-figure reveal zoomable">
+        <div class="shot"><picture><source srcset="/assets/img/cs/fs-solutions.avif" type="image/avif"><img src="/assets/img/cs/fs-solutions.png" alt="Annotated Today screen: at-a-glance workload, priority tags, job status tracker, sorting that works, same-address grouping, drive time up front, one clear next step, route optimization and appointment windows" width="1800" height="1226" loading="lazy" decoding="async"></picture></div>
+      </figure>
+      <figure class="cs-figure reveal zoomable">
+        <div class="cs-pair">
+          <div class="shot"><picture><source srcset="/assets/img/cs/fs-inventory.avif" type="image/avif"><img src="/assets/img/cs/fs-inventory.png" alt="Truck inventory screen with low-stock flags" width="1000" height="1348" loading="lazy" decoding="async"></picture></div>
+          <div class="shot"><picture><source srcset="/assets/img/cs/fs-route-map.avif" type="image/avif"><img src="/assets/img/cs/fs-route-map.png" alt="Route map with optimized stops" width="1000" height="1348" loading="lazy" decoding="async"></picture></div>
+        </div>
+        <figcaption>Route map with optimized stops, and truck inventory with low-stock flags</figcaption>
+      </figure>
+      <div class="ps">
+        <div class="ps-card reveal"><span class="label">Problem:</span><h3>Fragmented workflow</h3><p>Techs are expected to complete pre-job safety briefings and track their time on every job, both requiring a separate app. Job procedures can be found online and can be a crucial resource especially for new techs, but they live deep within the company website creating a navigational headache.</p></div>
+        <div class="ps-card solution reveal"><span class="label">Solution:</span><h3>Consolidated workflow</h3><p>My redesign addresses this by utilizing features already supported within the existing SAP app to bring these key resources under one umbrella. Automating things like time sheets and inventory reduce human error and improve accuracy allowing techs to show up less distracted and more prepared.</p></div>
+      </div>
+      <figure class="cs-figure reveal zoomable">
+        <div class="cs-pair">
+          <div class="shot"><picture><source srcset="/assets/img/cs/fs-review-clear.avif" type="image/avif"><img src="/assets/img/cs/fs-review-clear.png" alt="Guided completion, Review and clear step" width="1000" height="1334" loading="lazy" decoding="async"></picture></div>
+          <div class="shot"><picture><source srcset="/assets/img/cs/fs-job-detail.avif" type="image/avif"><img src="/assets/img/cs/fs-job-detail.png" alt="Redesigned job detail page for a gas leak investigation" width="1000" height="1334" loading="lazy" decoding="async"></picture></div>
+        </div>
+        <figcaption>Before and after of job details pages.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <h2 class="reveal">Project implications</h2>
+      <div class="prose reveal">
+        <p>At the conclusion of my design process, I presented my research findings to my manager, highlighting the challenges technicians face in the field and these high-fidelity mock-ups to present potential solutions.</p>
+        <p>Upper management expressed strong interest in incorporating many of our ideas into a new version of the asset management app that is currently being scoped.</p>
+        <p><strong>Proposed changes promise to:</strong></p>
+      </div>
+      <div class="prose reveal"><ul>
+        <li>Prioritize tasks based on due dates, appointment windows, and emergency status</li>
+        <li>Improve accuracy of time sheet tracking</li>
+        <li>Improve inventory management and accuracy</li>
+        <li>Reduce cognitive load, helping techs manage work orders and emergency situations more safely and effectively</li>
+        <li>Save time across daily operations</li>
+      </ul></div>
+    </section>
+
+    <section class="cs-section container" aria-label="Next case study">
+      <a class="next-cs reveal" href="/studio-six.html">
+        <div>
+          <span class="kicker">Next case study · No. 2</span>
+          <h2>Studio Six Closets</h2>
+          <p>Redesigning a homepage so a team's attention to detail reads before a client ever walks in.</p>
+          <span class="go">View case study <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg></span>
+        </div>
+        <div class="thumb"><picture><source srcset="/assets/img/work-studio-six.avif" type="image/avif"><img src="/assets/img/work-studio-six.jpg" alt="" loading="lazy"></picture></div>
+      </a>
+    </section>
+  </main>
+
+  <!-- site-footer cta -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- cta -->
+      <div class="footer-cta reveal">
+        <p class="eyebrow">Let’s talk</p>
+        <h2>Have a messy problem? Let’s untangle it.</h2>
+        <p>I’m open to UX/UI roles and freelance projects. Send a note, grab my résumé, or connect on LinkedIn.</p>
+        <div class="footer-actions">
+          <a class="btn btn-primary" href="/contact.html">Get in touch <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg></a>
+          <a class="btn btn-ghost" href="/assets/Garrett-Tipping-Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download résumé</a>
+        </div>
+      </div>
+      <!-- /cta -->
+      <div class="footer-grid">
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:garretttipping7@gmail.com">garretttipping7@gmail.com</a></li>
+            <li><a href="tel:+14074909996">407-490-9996</a></li>
+            <li>Orlando, FL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/garrett-tipping-ba7260289/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="/assets/Garrett-Tipping-Resume.pdf" download>Résumé (PDF)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="/index.html">Work</a></li>
+            <li><a href="/about.html">Résumé</a></li>
+            <li><a href="/other-work.html">Other Work</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Garrett Tipping. Designed and built in Orlando.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <!-- /site-footer -->
+</body>
+</html>

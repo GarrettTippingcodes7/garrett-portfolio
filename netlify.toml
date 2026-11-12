@@ -1,0 +1,15 @@
+# Netlify config: plain static site, no build step.
+# Netlify serves about.html at /about automatically ("Pretty URLs").
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
